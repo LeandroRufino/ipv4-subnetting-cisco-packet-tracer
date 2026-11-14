@@ -23,6 +23,8 @@ Tecnologias e conceitos utilizados
 
 Topologia da rede
 
+![Topologia da rede](Subrede_10.20.30.0.png)
+
 A topologia foi composta por:
 
 - 1 roteador central
@@ -49,7 +51,11 @@ Foram configuradas cinco interfaces GigabitEthernet no roteador, cada uma associ
 
 Após a configuração, todas as interfaces apresentaram estado operacional "up/up".
 
+![Interfaces do roteador](Show%20ip%20interface%20brief.png)
+
 O roteamento entre as redes foi realizado por meio das redes diretamente conectadas ao roteador.
+
+![Tabela de roteamento](Show%20ip%20route.png)
 
 Testes de conectividade
 
@@ -61,6 +67,16 @@ Teste| Origem| Destino| 1ª execução| 2ª execução
 3 — PC7| 10.20.30.98| 10.20.30.163| 25% de perda| 0% de perda
 4 — PC3| 10.20.30.130| 10.20.30.195| 25% de perda| 0% de perda
 5 — PC0| 10.20.30.163| 10.20.30.66| 0% de perda| 0% de perda
+
+![Ping 10.20.30.66 para 10.20.30.131](10.20.30.66%20ping%2010.20.30.131.png)
+
+![Ping 10.20.30.194 para 10.20.30.99](10.20.30.94%20ping%2010.20.30.99.png)
+
+![Ping 10.20.30.98 para 10.20.30.163](10.20.30.98%20ping%2010.20.30.163.png)
+
+![Ping 10.20.30.130 para 10.20.30.195](10.20.30.130%20ping%2010.20.30.195.png)
+
+![Ping 10.20.30.163 para 10.20.30.66](10.20.30.163%20ping%2010.20.30.66.png)
 
 Resultado: os cinco testes confirmaram a comunicação entre as sub-redes. Nas quatro primeiras execuções houve perda de um pacote; nas respectivas segundas execuções, todos os pacotes foram recebidos com sucesso. O quinto teste apresentou 0% de perda nas duas execuções.
 
