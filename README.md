@@ -61,12 +61,13 @@ Testes de conectividade
 
 Foram realizados cinco testes de ping entre computadores pertencentes a sub-redes diferentes. Cada teste foi executado duas vezes.
 
-Teste| Origem| Destino| 1ª execução| 2ª execução
-1 — PC8| 10.20.30.66| 10.20.30.131| 25% de perda| 0% de perda
-2 — PC4| 10.20.30.194| 10.20.30.99| 25% de perda| 0% de perda
-3 — PC7| 10.20.30.98| 10.20.30.163| 25% de perda| 0% de perda
-4 — PC3| 10.20.30.130| 10.20.30.195| 25% de perda| 0% de perda
-5 — PC0| 10.20.30.163| 10.20.30.66| 0% de perda| 0% de perda
+| Teste | Origem | Destino | 1ª execução | 2ª execução |
+|---|---|---|---|---|
+| 1 — PC8 | 10.20.30.66 | 10.20.30.131 | 25% de perda | 0% de perda |
+| 2 — PC4 | 10.20.30.194 | 10.20.30.99 | 25% de perda | 0% de perda |
+| 3 — PC7 | 10.20.30.98 | 10.20.30.163 | 25% de perda | 0% de perda |
+| 4 — PC3 | 10.20.30.130 | 10.20.30.195 | 25% de perda | 0% de perda |
+| 5 — PC0 | 10.20.30.163 | 10.20.30.66 | 0% de perda | 0% de perda |
 
 ![Ping 10.20.30.66 para 10.20.30.131](10.20.30.66%20ping%2010.20.30.131.png)
 
