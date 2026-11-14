@@ -2,17 +2,17 @@ Planejamento e Implementação de Sub-redes IPv4
 
 Sobre o projeto
 
-Projeto prático desenvolvido no Cisco Packet Tracer com o objetivo de dividir uma rede IPv4 "/24" em cinco sub-redes "/27", configurar o endereçamento IP e estabelecer comunicação entre diferentes redes.
+Projeto prático desenvolvido no Cisco Packet Tracer 9.0, com o objetivo de dividir uma rede IPv4 "/24" em cinco sub-redes "/27", configurar o endereçamento IP dos dispositivos e validar a comunicação entre diferentes redes por meio de testes de conectividade.
 
 Objetivos
 
-- Aplicar subnetting IPv4.
+- Aplicar conceitos de subnetting IPv4.
 - Calcular endereços de rede, hosts e broadcast.
-- Configurar endereços IP e gateways.
-- Configurar interfaces de roteador.
-- Validar a comunicação entre sub-redes.
+- Configurar endereços IP e gateways padrão.
+- Configurar interfaces de um roteador.
+- Validar a comunicação entre diferentes sub-redes.
 
-Tecnologias e conceitos
+Tecnologias e conceitos utilizados
 
 - Cisco Packet Tracer 9.0
 - IPv4
@@ -21,20 +21,20 @@ Tecnologias e conceitos
 - Roteamento entre redes
 - ICMP (Ping)
 
-Topologia
+Topologia da rede
 
-A rede foi construída utilizando:
+A topologia foi composta por:
 
-- 1 roteador central.
-- 5 switches.
-- 10 computadores.
-- 5 sub-redes IPv4.
+- 1 roteador central
+- 5 switches
+- 10 computadores
+- 5 sub-redes IPv4
 
-Endereçamento IPv4
+Planejamento de endereçamento
 
 Rede original: "10.20.30.0/24"
 
-Máscara utilizada: "255.255.255.224 (/27)"
+Máscara de sub-rede: "255.255.255.224 (/27)"
 
 Sub-rede| Endereço de rede| Gateway| Broadcast
 1| 10.20.30.64/27| 10.20.30.65| 10.20.30.95
@@ -45,37 +45,39 @@ Sub-rede| Endereço de rede| Gateway| Broadcast
 
 Configuração do roteador
 
-Foram configuradas cinco interfaces GigabitEthernet, cada uma com um endereço IP correspondente ao gateway de sua sub-rede.
+Foram configuradas cinco interfaces GigabitEthernet no roteador, cada uma associada ao gateway de uma das sub-redes.
 
-Todas as interfaces apresentaram estado operacional "up/up".
+Após a configuração, todas as interfaces apresentaram estado operacional "up/up".
 
-O roteamento foi realizado por meio das redes diretamente conectadas ao roteador.
+O roteamento entre as redes foi realizado por meio das redes diretamente conectadas ao roteador.
 
 Testes de conectividade
 
-Foram realizados testes ICMP (Ping) entre computadores de diferentes sub-redes.
+Foram realizados cinco testes de ping entre computadores pertencentes a sub-redes diferentes. Cada teste foi executado duas vezes.
 
-Resultados:
+Teste| Origem| Destino| 1ª execução| 2ª execução
+1 — PC8| 10.20.30.66| 10.20.30.131| 25% de perda| 0% de perda
+2 — PC4| 10.20.30.194| 10.20.30.99| 25% de perda| 0% de perda
+3 — PC7| 10.20.30.98| 10.20.30.163| 25% de perda| 0% de perda
+4 — PC3| 10.20.30.130| 10.20.30.195| 25% de perda| 0% de perda
+5 — PC0| 10.20.30.163| 10.20.30.66| 0% de perda| 0% de perda
 
-- PC8 ("10.20.30.66") para "10.20.30.131": 4 pacotes recebidos, 0% de perda.
-- PC7 ("10.20.30.98") para "10.20.30.163": 4 pacotes recebidos, 0% de perda.
-
-Os testes confirmaram a comunicação entre os diferentes segmentos da rede.
+Resultado: os cinco testes confirmaram a comunicação entre as sub-redes. Nas quatro primeiras execuções houve perda de um pacote; nas respectivas segundas execuções, todos os pacotes foram recebidos com sucesso. O quinto teste apresentou 0% de perda nas duas execuções.
 
 Arquivo do projeto
 
 "Subrede_10.20.30.0.pkt"
 
-Arquivo desenvolvido no Cisco Packet Tracer, disponibilizado para análise da topologia e das configurações.
-
-Competências demonstradas
+Competências desenvolvidas
 
 - Planejamento de redes IPv4.
-- Divisão de redes em sub-redes (Subnetting).
+- Cálculo e divisão de sub-redes (Subnetting).
 - Configuração de endereçamento IP.
-- Configuração de interfaces de roteador.
+- Configuração de interfaces de roteadores.
 - Roteamento entre redes diretamente conectadas.
 - Testes e validação de conectividade.
+
+---
 
 Ferramenta: Cisco Packet Tracer 9.0
 Categoria: Redes de Computadores
